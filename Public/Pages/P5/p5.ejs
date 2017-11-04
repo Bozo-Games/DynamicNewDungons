@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title><%= name %></title>
+    <% for(var i = 0; i < externalScripts.length; i++) { %>
+        <script src=<%=  externalScripts[i]%> ></script>
+    <% }%>
+    <script src="/Public/Shared/SupportingFiles/p5/p5.js"></script>
+    <script src="/Public/Shared/SupportingFiles/p5/addons/p5.dom.js"></script>
+    <script src="/Public/Shared/SupportingFiles/p5/addons/p5.sound.js"></script>
+
+    <% for(var i = 0; i < extraScripts.length; i++) { %>
+        <script src=<%= "../javascripts/" + extraScripts[i]%> ></script>
+    <% }%>
+    <script src=<%= "/Public/Shared/Main/"+name+".js"%>></script>
+    <style> body {padding: 0; margin: 0;} </style>
+</head>
+</body>
+</html>
